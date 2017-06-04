@@ -1,0 +1,73 @@
+; Copyright Anatolymik
+[Version]
+Signature=$Windows NT$
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+Provider=%CompanyName%
+CatalogFile=USBLock.cat
+DriverVer=01/01/2010,1.0.0.0
+
+;
+; Installation
+;
+[DefaultInstall.nt$ARCH$]
+CopyFiles=USBLockFiles
+AddReg=USBLockServiceRegister
+
+[DefaultInstall.nt$ARCH$.Services]
+AddService=%ServiceName%,,USBLockService
+
+;
+; Uninstallation
+;
+[DefaultUninstall.nt$ARCH$]
+DelFiles=USBLockFiles
+DelReg=USBLockServiceUnregister
+
+[DefaultUninstall.nt$ARCH$.Services]
+DelService=%ServiceName%
+
+;
+; Source files
+;
+[SourceDisksNames]
+1=%SourceDiskName%,,,
+
+[SourceDisksFiles]
+USBLock.sys=1
+
+[USBLockFiles]
+USBLock.sys
+
+;
+; Destination directories
+;
+[DestinationDirs]
+DefaultDestDir=12
+
+;
+; Services
+;
+[USBLockService]
+DisplayName=%ServiceDisplayName%
+ServiceType=1
+StartType=0
+ErrorControl=1
+ServiceBinary=%12%\USBLock.sys
+
+[USBLockServiceRegister]
+HKLM, System\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}, "UpperFilters", 0x00010008, %ServiceName%
+
+[USBLockServiceUnregister]
+HKLM, System\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}, "UpperFilters", 0x00018002, %ServiceName%
+
+;
+; Constants
+;
+[Strings]
+CompanyName="Anatolymik"
+SourceDiskName="USB Lock Driver"
+
+ServiceDisplayName="USB Lock driver"
+
+ServiceName="USBLock"

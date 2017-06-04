@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="basic\drv\drv.cpp">
+      <Filter>basic\drv</Filter>
+    </ClCompile>
+    <ClCompile Include="usb\dispatch.cpp">
+      <Filter>usb</Filter>
+    </ClCompile>
+    <ClCompile Include="usb\power.cpp">
+      <Filter>usb</Filter>
+    </ClCompile>
+    <ClCompile Include="usb\pnp.cpp">
+      <Filter>usb</Filter>
+    </ClCompile>
+    <ClCompile Include="usb\usb.cpp">
+      <Filter>usb</Filter>
+    </ClCompile>
+    <ClCompile Include="control\cleanup.cpp">
+      <Filter>control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\close.cpp">
+      <Filter>control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\control.cpp">
+      <Filter>control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\create.cpp">
+      <Filter>control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\dispatch.cpp">
+      <Filter>control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\ioctl.cpp">
+      <Filter>control</Filter>
+    </ClCompile>
+    <ClCompile Include="usb\strucs.cpp">
+      <Filter>usb</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="basic">
+      <UniqueIdentifier>{080d1934-e17b-4bb9-b61f-79249397b8ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\drv">
+      <UniqueIdentifier>{2df13e36-d9de-4fed-ade5-68e27cb3e2e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usb">
+      <UniqueIdentifier>{f5b6bd66-2536-4ab4-b942-b244da7f56a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="control">
+      <UniqueIdentifier>{5ca08479-641f-4726-b493-8db15e5c533d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="basic\basic.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="basic\drv\drv.h">
+      <Filter>basic\drv</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\incs.h">
+      <Filter>usb</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\strucs.h">
+      <Filter>usb</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\dispatch.h">
+      <Filter>usb</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\power.h">
+      <Filter>usb</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\pnp.h">
+      <Filter>usb</Filter>
+    </ClInclude>
+    <ClInclude Include="usb\usb.h">
+      <Filter>usb</Filter>
+    </ClInclude>
+    <ClInclude Include="control\cleanup.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\close.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\control.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\controlexp.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\create.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\dispatch.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\incs.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\ioctl.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\strucs.h">
+      <Filter>control</Filter>
+    </ClInclude>
+    <ClInclude Include="exp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="USBLock.inx" />
+  </ItemGroup>
+</Project>
